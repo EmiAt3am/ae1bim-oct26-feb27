@@ -1,5 +1,5 @@
 from datetime import date
-from sqlalchemy import sessionmaker
+from sqlalchemy.orm import sessionmaker
 
 from crear_base_entidades import engine, Clinica, Consultorio, Veterinario, HistoriaClinica
 
@@ -85,6 +85,7 @@ hist1 = HistoriaClinica(
     diagnostico='Gastroenteritis leve',
     tratamiento='Dieta blanda e hidratación por 3 días',
     nombre_mascota='Mau Lou',
+    veterinario=vet1
 )
 hist2 = HistoriaClinica(
     fecha=date(2026, 11, 5),
